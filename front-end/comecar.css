@@ -1,0 +1,70 @@
+body {
+    background-image: url(./images/fundoMana2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+nav {
+    width: 100vw;
+    height: 80px;
+    background-color: #2d0a5c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div p {
+    color: white;
+    margin: 0;
+    font-family: 'Paytone One', sans-serif;
+}
+
+.container {
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container div {
+    width: 50px;
+    height: 1px;
+    background-color: white;
+}
+
+.container p:nth-child(5) {
+    color: #FF43A3;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    margin-left: 683px;
+    margin-top: 294px
+}
+
+h1 {
+    font-family: 'DM Sans', sans-serif;
+    color: #FF43A3;
+}
+
+h2 {
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    margin-top: 0;
+}
+
+button {
+    cursor: pointer;
+    width: 320px;
+    height: 45px;
+    color: white;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 14pt;
+    background-color: #FF43A3;
+    border-style: none;
+    border-radius: 10px;
+}

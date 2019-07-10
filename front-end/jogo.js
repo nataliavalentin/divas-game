@@ -1,0 +1,14 @@
+let botao = document.querySelector("button")
+let imagem = document.querySelector(".imagem")
+let h1 = document.querySelector("h1")
+let p = document.querySelector("p")
+
+
+function mudarImagem() {
+    h1.innerHTML = "O QUE É HTML?"
+    p.innerHTML = "Vamos começar com HTML, a linguagem de marcação responsável pela estrutura das páginas web na internet. A linguagem HTML diz para o browser como ler os conteúdos do site, como imagem, links e textos."
+    imagem.src = "./images/template.png"
+
+}
+
+botao.onclick = mudarImagem;

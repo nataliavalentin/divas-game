@@ -1,0 +1,107 @@
+body {
+    background-image: url(./images/fundo2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+nav {
+    width: 100vw;
+    height: 80px;
+    background-color: #220458;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div p {
+    color: white;
+    margin: 0;
+    font-family: 'Paytone One', sans-serif;
+}
+
+.container {
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container div {
+    width: 50px;
+    height: 1px;
+    background-color: white;
+}
+
+.container p:first-child {
+    color: #FF43A3;
+}
+
+h1 {
+    margin-bottom: 0px;
+    margin-top: 30px;
+    font-family: 'Khula', sans-serif;
+    font-size: 18pt;
+    color: white;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    width: 60vw;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    align-items: center;
+}
+
+.facil {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 320px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 2px 12px #0000001a;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.titulo {
+    color: #220458;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 14pt;
+    margin-bottom: 0;
+}
+
+.texto {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.jusTexto {
+    width: 144px;
+}
+
+.facil:hover {
+    border: 4px solid #FF43A3;
+}
+
+button {
+    cursor: pointer;
+    width: 320px;
+    height: 45px;
+    color: white;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 14pt;
+    background-color: #FF43A3;
+    border-style: none;
+    border-radius: 10px;
+}

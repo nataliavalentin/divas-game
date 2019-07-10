@@ -1,0 +1,114 @@
+body {
+    background-image: url(../front-end/images/fundo.png);
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+}
+
+nav {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+}
+
+#container {
+    width: 90%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    font-family: 'B612 Mono', monospace;
+    color: white;
+    text-decoration: none;
+}
+
+.botoes {
+    float: right;
+    display: flex;
+}
+
+#game {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: none;
+    border: none;
+    border-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#entrar {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: none;
+    border: none;
+    border-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cadastro {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: none;
+    border: 2px solid;
+    border-color: #ce6fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#space {
+    width: 100px;
+}
+
+section {
+    position: relative;
+}
+
+#astronauta {
+    width: 190px;
+    padding-top: 150px;
+    position: absolute;
+    display: flex;
+    left: -550px;
+    animation: astronauta 2s ease-in-out infinite alternate-reverse;
+    z-index: 500;
+}
+
+@keyframes astronauta {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0px)
+    }
+}
+
+#meteoro {
+    position: absolute;
+    right: 0px;
+    top: 220px;
+    animation: meteoro 7s linear infinite;
+}
+
+@keyframes meteoro {
+    from {
+        transform: translate(0px, -200px)
+    }
+    to {
+        transform: translate(-2500px, 500px)
+    }
+}
+
+
+/* AQUI TERMINA AS ANIMAÇÕES DA HOME */
