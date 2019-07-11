@@ -3,6 +3,7 @@ body {
     background-size: cover;
     display: flex;
     overflow: hidden;
+    margin: 0;
 }
 
 nav {
@@ -112,3 +113,100 @@ section {
 
 
 /* AQUI TERMINA AS ANIMAÇÕES DA HOME */
+
+#fundo {
+    background-color: rgba(0, 0, 0, 0.658);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    visibility: hidden;
+    animation: fadeSimple 0.3s ease-in-out 0.3s forwards;
+    z-index: 1400;
+    margin: 0;
+}
+
+#fundo2 {
+    background-color: rgba(0, 0, 0, 0.658);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    visibility: hidden;
+    animation: fadeSimple 0.3s ease-in-out 0.3s forwards;
+    z-index: 1400;
+    margin: 0;
+}
+
+@keyframes fadeSimple {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#popup {
+    width: 30%;
+    height: 60%;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 14pt;
+    color: #FF43A3;
+}
+
+#entrarLogin {
+    width: 320px;
+    height: 45px;
+    color: white;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 14pt;
+    background-color: #FF43A3;
+    border-style: none;
+    margin: 6px;
+}
+
+input {
+    width: 320px;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+}
+
+.esquecer a {
+    color: black;
+    font-family: 'DM Sans', sans-serif;
+    margin: 3px;
+}
+
+.esquecer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#botaoVoltar {
+    cursor: pointer;
+}
+
+.cadastrese {
+    cursor: pointer;
+}
