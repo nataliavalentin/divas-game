@@ -203,10 +203,14 @@ input {
     text-align: center;
 }
 
-#botaoVoltar {
+#fechar-login {
     cursor: pointer;
 }
 
-.cadastrese {
+#fechar-cadastro {
     cursor: pointer;
+}
+
+.cadastrese{
+    cursor: pointer; 
 }
