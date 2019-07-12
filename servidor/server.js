@@ -3,7 +3,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const servidor = express()
 const DivasController = require('./DivasController')
-const PORT = 5005
+const PORT = 5000
 
 servidor.use(cors())
 servidor.use(bodyParser.json())
@@ -18,7 +18,7 @@ servidor.get("/divas", (request, response) => {
 
 servidor.get("/divas/:id", (request, response) => {
     const id = request.params.id
-    controller.getById(id)
+    DivasController.getById(id)
         .then(usuario => {
             if (!usuario) {
                 response.sendStatus(404)
@@ -37,7 +37,7 @@ servidor.get("/divas/:id", (request, response) => {
 
 servidor.patch('/divas', (request, response) => {
     const id = request.params.id
-    controller.update(id, request.body)
+    DivasController.update(id, request.body)
         .then(usuario => {
             if (!usuario) { response.sendStatus(404) } else { response.send(usuario) }
         })
@@ -51,7 +51,7 @@ servidor.patch('/divas', (request, response) => {
 })
 
 servidor.post('/divas', (request, response) => {
-    controller.add(request.body)
+    DivasController.add(request.body)
         .then(usuario => {
             const _id = usuario._id
             response.send(_id)
@@ -60,13 +60,14 @@ servidor.post('/divas', (request, response) => {
             if (error.name === "ValidationError") {
                 response.sendStatus(400) // bad request
             } else {
+                console.log(error)
                 response.sendStatus(500)
             }
         })
 })
 
 servidor.post('/divas/login', (request, response) => {
-    controller.add(request.body)
+    DivasController.add(request.body)
         .then(usuario => {
             const _id = usuario._id
             response.send(_id)
@@ -81,7 +82,7 @@ servidor.post('/divas/login', (request, response) => {
 })
 
 servidor.delete('/divas/:id', (request, response) => {
-    controller.remove(request.params.id)
+    DivasController.remove(request.params.id)
         .then(usuario => {
             if (usuario === null || usuario === undefined) { // if(!comida) 
                 response.sendStatus(404) // not found
