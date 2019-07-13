@@ -52,4 +52,4 @@ const login = async(dadosDoLogin) => {
     }
 }
 
-module.exports = { getAll, getById, add, remove, update, login }c 
+module.exports = { getAll, getById, add, remove, update, login }

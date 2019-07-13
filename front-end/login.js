@@ -1,38 +1,34 @@
-let entrar = document.getElementById('entrarLogin')
-let nome = document.getElementById('nome')
-let sobrenome = document.getElementById('sobrenome')
-let username = document.getElementById('username')
-let senha = document.getElementById('senha')
+let entrarLoginUsername = document.querySelector('#entrarLoginUsername')
+let username2 = document.getElementById('loginUsername')
+let senha2 = document.getElementById('senhaUsername')
 
 
 
-entrar.addEventListener('onclick', () => {
-    fetch('http://localhost:8785/divas/cadastro', {
+entrarLoginUsername.addEventListener('click', () => {
+    fundo.style.display = 'none',
+        event.preventDefault()
+    fetch('http://localhost:8000/divas/login', {
         method: 'POST',
         headers: {
-            'Accept': 'application/json'
-            "nome": nome.value,
-            "sobrenome": sobrenome.value,
-            "username": username.value,
-            "senha": senha.value
-
+            'Content-type': 'application/json',
 
         },
         body: JSON.stringify({
-
+            "username": username2.value,
+            "senha": senha2.value
         })
     })
 
 
     .then(function(response) {
-            return response.json()
-        })
-        .then(function(data) {
+        return response.json()
+    })
 
+    .then(function(data) {
+        console.log(data)
+    })
 
-
-        })
-        .catch(function(erro) {
-            console.log(erro)
-        })
+    .catch(function(erro) {
+        console.log(erro)
+    })
 });

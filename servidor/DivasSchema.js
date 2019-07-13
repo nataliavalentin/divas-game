@@ -7,7 +7,6 @@ const DivasSchema = new Schema({
     email: { type: String, required: true },
     username: { type: String, required: true },
     senha: { type: String, required: true },
-    foto: { type: String },
     ponto: { type: Number },
 })
 
