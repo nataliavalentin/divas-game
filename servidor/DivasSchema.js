@@ -13,4 +13,4 @@ const DivasSchema = new Schema({
 
 const DivasModel = mongoose.model("divas", DivasSchema);
 
-module.exports = { DivasModel, DivasSchema };
+module.exports = DivasModel;

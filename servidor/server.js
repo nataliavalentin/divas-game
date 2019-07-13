@@ -3,7 +3,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const servidor = express()
 const DivasController = require('./DivasController')
-const PORT = 5000
+const PORT = 8785
 
 servidor.use(cors())
 servidor.use(bodyParser.json())
@@ -13,7 +13,8 @@ servidor.get("/", (request, response) => {
 })
 
 servidor.get("/divas", (request, response) => {
-    response.send("aaaaaaa")
+    DivasController.getAll()
+        .then(divas => response.send(divas))
 })
 
 servidor.get("/divas/:id", (request, response) => {
@@ -50,7 +51,7 @@ servidor.patch('/divas', (request, response) => {
         })
 })
 
-servidor.post('/divas', (request, response) => {
+servidor.post('/divas/cadastro', (request, response) => {
     DivasController.add(request.body)
         .then(usuario => {
             const _id = usuario._id
@@ -67,15 +68,16 @@ servidor.post('/divas', (request, response) => {
 })
 
 servidor.post('/divas/login', (request, response) => {
-    DivasController.add(request.body)
-        .then(usuario => {
-            const _id = usuario._id
-            response.send(_id)
+    DivasController.login(request.body)
+        .then(respostaDoLogin => {
+            response.send(respostaDoLogin)
         })
         .catch(error => {
             if (error.name === "ValidationError") {
-                response.sendStatus(400) // bad request
+                console.log(error)
+                response.sendStatus(400)
             } else {
+                console.log(error)
                 response.sendStatus(500)
             }
         })
